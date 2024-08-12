@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "my_blog_sites",
+  "info": {
+    "singularName": "my-blog-site",
+    "pluralName": "my-blog-sites",
+    "displayName": "my-blog-site",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "sub_title": {
+      "type": "text"
+    },
+    "type_of_blog": {
+      "type": "enumeration",
+      "enum": [
+        "Technial",
+        "Non-Technica"
+      ]
+    },
+    "main_body": {
+      "type": "text"
+    },
+    "author_name": {
+      "type": "string"
+    },
+    "author_email": {
+      "type": "email"
+    },
+    "author_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "blog_id": {
+      "type": "customField",
+      "customField": "plugin::strapi-advanced-uuid.uuid"
+    }
+  }
+}
